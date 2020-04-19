@@ -1,0 +1,43 @@
+.c-latest-posts {
+    box-sizing: border-box;
+}
+
+.c-latest-posts.aligncenter {
+    text-align: center;
+}
+
+.c-latest-posts.alignright {
+    text-align: right;
+}
+
+.c-latest-posts * {
+    box-sizing: inherit;
+}
+
+.c-latest-posts__items {
+    font-size: 0;
+    margin-left: -30px;
+}
+
+.c-latest-posts__item {
+    margin-bottom: 30px;
+    padding-left: 30px;
+    font-size: 16px;
+}
+
+.c-latest-posts__title {
+    margin: 0 !important;
+    font-size: inherit !important;
+}
+
+.c-latest-posts__title-link {
+    text-decoration: none;
+
+    display: block;
+    padding: 15px 20px;
+
+    border: 2px dashed #eee;
+
+    background: #f9f9f9;
+    color: inherit;
+}
