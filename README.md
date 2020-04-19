@@ -4,6 +4,7 @@ Adds ability to create ACF Blocks via WordPress admin panel.
 ## Requirements
 
 - ACF Pro
+- ACF Repeater Field
 - ACF Code Field
 - Timber
 
