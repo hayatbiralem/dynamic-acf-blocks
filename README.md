@@ -3,10 +3,10 @@ Adds ability to create ACF Blocks via WordPress admin panel.
 
 ## Requirements
 
-- ACF Pro
-- ACF Repeater Field
-- ACF Code Field
-- Timber
+- [ACF Pro](https://www.advancedcustomfields.com/pro/) (paid)
+- [ACF Repeater Field](https://www.advancedcustomfields.com/resources/repeater/) (also paid but it comes with ACF Pro)
+- [ACF Code Field](https://tr.wordpress.org/plugins/acf-code-field/) (free)
+- [Timber](https://tr.wordpress.org/plugins/timber-library/) (free)
 
 ## Usage
 
