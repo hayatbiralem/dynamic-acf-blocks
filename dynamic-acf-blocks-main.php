@@ -509,7 +509,12 @@ if (!class_exists('DYNAMIC_ACF_BLOCKS')) {
                             'name' => $this->key_helper->name('entries'),
                             'type' => 'repeater',
                             'instructions' => sprintf(
-                                __('More info: %s', 'dynamic-acf-blocks'),
+                                __('More info: %s %s', 'dynamic-acf-blocks'),
+                                sprintf(
+                                    '<a href="https://www.advancedcustomfields.com/resources/blocks/" target="_blank">%s%s</a>',
+                                    'ACF Blocks',
+                                    self::$external_icon
+                                ),
                                 sprintf(
                                     '<a href="https://www.advancedcustomfields.com/resources/acf_register_block_type/" target="_blank">%s%s</a>',
                                     'acf_register_block_type()',
