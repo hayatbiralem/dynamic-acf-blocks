@@ -28,7 +28,7 @@ if (!class_exists('DYNAMIC_ACF_BLOCKS')) {
         private static $base_key = 'dynamic_acf_blocks';
         private static $base_slug = 'dynamic-acf-blocks';
         private static $external_icon = '<i class="dashicons dashicons-external" style="font-size: inherit; line-height: inherit; text-decoration: none; height: auto;"></i>';
-        private static $pre_template = '<pre style="background: #f9f9f9; padding: 15px;">%s</pre>';
+        private static $pre_template = '<pre style="background: #f9f9f9; padding: 15px; overflow: auto;">%s</pre>';
 
         function __construct()
         {
@@ -116,7 +116,7 @@ if (!class_exists('DYNAMIC_ACF_BLOCKS')) {
             $field['choices'] = array();
 
             if (!function_exists('get_block_categories')) {
-                include ABSPATH . 'wp-admin/includes/post.php';
+                require_once ABSPATH . 'wp-admin/includes/post.php';
             }
 
             if (function_exists('get_block_categories')) {
@@ -822,32 +822,23 @@ if (!class_exists('DYNAMIC_ACF_BLOCKS')) {
 
         function create_file($file_name, $content)
         {
-            global $wp_filesystem;
-
-            if (is_null($wp_filesystem)) {
-                WP_Filesystem();
-            }
-
             $file = $this->get_file_path($file_name);
-            $wp_filesystem->put_contents($file, $content);
+            file_put_contents($file, $content);
         }
 
         function delete_file($file_name)
         {
-            global $wp_filesystem;
-
-            if (is_null($wp_filesystem)) {
-                WP_Filesystem();
-            }
-
             $file = $this->get_file_path($file_name);
-            $wp_filesystem->delete($file);
+            unlink($file);
         }
 
         function get_file_path($file_name)
         {
             $destination = wp_upload_dir();
             $destination_path = $destination['basedir'] . '/' . self::$base_key;
+            if(!is_dir($destination_path)) {
+                mkdir($destination_path);
+            }
             return $destination_path . '/' . $file_name;
         }
 

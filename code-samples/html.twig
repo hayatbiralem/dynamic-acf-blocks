@@ -4,7 +4,10 @@
 <div class="c-latest-posts{{ classes ? ' ' ~ classes : '' }}">
 
     {% if title %}
-        <h3 class="c-latest-posts__title"{{ title_color ? ' style="color: ' ~ title_color ~ ';"' : '' }}>{{ title }}</h3>
+        <h3 class="c-latest-posts__title"
+                {{ title_color ? ' style="color: ' ~ title_color ~ ';"' : '' }}>
+            {{ title }}
+        </h3>
     {% endif %}
 
     {% if posts is defined and posts is iterable %}
