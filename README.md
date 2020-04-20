@@ -22,3 +22,10 @@ Adds ability to create ACF Blocks via WordPress admin panel.
 It is just a start. I want to reformat the code and add some other useful features like Import/Export, emmet (zen coding) support in code mirror, etc.
 
 Feel free to ask via issues and contribute via prs.
+
+# Todo
+
+- Using custom post type to create blocks
+- Import/Export
+- Zen coding in code mirror
+- Twig support for code field
